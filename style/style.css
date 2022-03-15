@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    font-family: "ubuntu",sans-serif;
+}
+
+body{
+    background-color: #132533;
+    margin: 0;
+    color: white;
+    scroll-behavior: smooth;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+/*MENU*/
+.navbar-section{
+    display: flex;
+    flex-direction: row;
+    max-height: 80px;
+    align-items: center;
+    position: absolute;
+    z-index: 10;
+    max-width: 1080px;
+    top: 0;
+}
+.navbar-section__logo{
+    width: 10%;
+}
+.navbar-section__logo img{
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+.navbar ul{
+    padding: 0; 
+    list-style: none; 
+    display: table;
+    text-align: center;
+    margin: 0;
+}
+.navbar li{
+    display: table-cell; 
+    position: relative; 
+    padding: 15px 0;
+}
+.navbar a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    font-size: 16px;
+    transition: ease 0.3s;
+}
+.navbar a:hover{
+    color: #f15927
+}
+.navbar a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #f15927;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.navbar a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+/*Main Banner*/
+.main-banner{
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/endless-constellation.svg);
+    background-repeat: repeat;
+}
+.main-banner__heading{
+    max-width: 1080px;
+    text-align: center;
+}
+
+.main-banner__heading h1{
+    font-size: 45px;
+}
+
+.main-banner__heading h3{
+    font-size: 28px;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Responsive*/
+
+@media screen and (max-width: 760px){
+    .navbar-section{
+        flex-wrap: wrap;
+        padding: 10px 30px;
+        max-height: unset;
+    }
+    .navbar {
+    display: flex;
+    flex: unset;
+    justify-content: center;
+    margin: 0 auto;
+    }
+    .navbar a{
+        padding: 10px;
+        font-size: 14px;
+    }
+    .navbar-section__logo {
+        width: 100px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 450px){
+    .navbar-section{
+        padding: 10px 20px;
+    }
+    .navbar a{
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .navbar-section{
+        padding: 10px;
+    }
+    .navbar a{
+        padding: 5px;
+        font-size: 12px;
+    }
+}
