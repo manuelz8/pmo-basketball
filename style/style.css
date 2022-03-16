@@ -147,6 +147,10 @@ span.material-icons{
     font-size: 28px;
     font-weight: 400;
 }
+.main-banner__heading h3 a{
+    color: #f15927;
+    text-decoration: none;
+}
 
 .main-banner__social-media{
     display: flex;
@@ -198,6 +202,17 @@ span.material-icons{
 }
 
 /*Academy selector*/
+.section-heading{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.section-heading span{
+    color: #f15927;
+}
 
 .academy-selector{
     max-width: 1080px;
@@ -206,6 +221,8 @@ span.material-icons{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .academy-selector a{
@@ -234,7 +251,9 @@ span.material-icons{
  font-size: 30px;
  font-weight: 900;
 }
-
+.academy-text__container span{
+    color: #f15927;
+}
 .academy p{
     font-size: 16px;
     font-weight: 500;
@@ -250,7 +269,158 @@ span.material-icons{
     width: 100%;
 }
 
+/*Footer*/
 
+footer{
+    width: 100%;
+    background-color: #132533;
+    margin-top: 50px;
+    padding: 40px 0 0;
+    border-top: #172F4D solid 1px;
+}
+.footer-container{
+    padding: 20px;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+}
+
+.footer-menu{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-menu li{
+    transition: 0.3s ease;
+    position: relative;
+    text-align: center;
+    width: 90%;
+}
+.footer-menu li a{
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-menu li a:hover{
+    color: #f15927
+}
+.footer-menu li a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #f15927;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.footer-menu li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+.social-media__footer{
+    width: 33%;
+}
+.social-media__footer h2{
+    text-align: center;
+}
+.social-media__footer p{
+    text-align: center;
+}
+.social-media__footer a{
+    text-decoration: none;
+    color: white;
+    transition: ease 0.3s;
+    font-weight: 900;
+}
+.social-media__footer a:hover{
+    color: #f15927;
+    transform: scale(1.1);
+}
+.social-media__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.social-icon__footer{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: ease 0.5s;
+    margin: 0 15px;
+}
+
+.social-icon__footer:hover{
+    transform: scale(1.1);
+    background-color: #f15927;
+}
+
+.social-icon__footer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon__footer img{
+    width: 70%;
+}
+
+.company-info__footer{
+    width: 33%;
+    display: flex;
+    justify-content: right;
+}
+.company-info__footer ul{
+    list-style: none;
+}
+@media screen and (max-width: 835px){
+    .footer-menu{
+        width: 100%;
+        align-items: center;
+    }
+    
+    .social-media__footer{
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .company-info__footer{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .company-info__footer ul{
+        padding: 0;
+    }
+}
 /*Responsive*/
 
 @media screen and (max-width: 835px){
@@ -335,11 +505,16 @@ span.material-icons{
         justify-content: center;
         margin: 20px;
     }
+
+    .section-heading{
+        margin-bottom: 50px;
+    }
     .academy-selector a{
         width: 100%;
+    }
+    .academy-selector a:nth-child(3){
         margin-top: 40px;
     }
-
     .academy-selector a:hover{
         transform: scale(1);
     }
